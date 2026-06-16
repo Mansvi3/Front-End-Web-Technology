@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Classes and Pseudo Elements</title>
+    <style>
+        /* (a) Link colors */
+        a:link {
+            color: orange; /* Before visited */
+        }
+
+        a:visited {
+            color: red; /* After visited */
+        }
+
+        /* (b) Style first line of paragraph */
+        p::first-line {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* (c) Style first letter of paragraph */
+        p::first-letter {
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* (d) Style selected text */
+        ::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Element for hover effect */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+
+        /* (e) Style on mouse hover */
+        .box:hover {
+            background-color: purple;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Link Example</h2>
+    <a href="https://www.google.com">Visit Google</a>
+
+    <h2>Paragraph Example</h2>
+    <p>
+        Cascading Style Sheets (CSS) is used to style web pages.
+        It allows developers to change colors, fonts, layouts, and
+        add interactive effects to HTML elements.
+    </p>
+
+    <h2>Selection Example</h2>
+    <p>Select some text in this paragraph to see the yellow background effect.</p>
+
+    <h2>Hover Example</h2>
+    <div class="box">
+        Mouse Over Me
+    </div>
+
+</body>
+</html>

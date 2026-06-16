@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation Demo</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* Animation properties */
+            animation-name: moveBox;
+            animation-duration: 8s;
+            animation-delay: 2s;              /* (b) 2-second delay */
+            animation-iteration-count: infinite; /* (c) Infinite times */
+            animation-direction: reverse;     /* (d) Reverse order */
+            animation-timing-function: ease-in-out; /* (e) Speed variation */
+            position: relative;
+        }
+
+        @keyframes moveBox {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow; /* (a) Red to Yellow */
+                left: 300px;              /* Left → Right */
+                top: 0px;
+            }
+
+            50% {
+                background-color: yellow;
+                left: 300px;
+                top: 300px;               /* Right → Bottom */
+            }
+
+            75% {
+                background-color: yellow;
+                left: 0px;                /* Bottom → Left */
+                top: 300px;
+            }
+
+            100% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;                 /* Left → Top */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
