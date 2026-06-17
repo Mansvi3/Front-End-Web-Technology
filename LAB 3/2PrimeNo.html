@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = parseInt(prompt("Enter a positive number to check for prime:"));
+      let isPrime = true;
+
+      if (num <= 1) {
+        isPrime = false;
+      } else {
+        for (let i = 2; i <= Math.sqrt(num); i++) { <!--Remember-->
+          if (num % i == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+      }
+
+      if (isPrime) {
+        alert(num + " is a prime number.");
+      } else {
+        alert(num + " is not a prime number.");
+      }
+    </script>
+  </body>
+</html>
+
+<!--If a number has a factor larger than its square root, it must also have a matching factor 
+smaller than its square root.
+
+For example, let's look at the factors of 36 (\(\sqrt{36} = 6\)):
+\(2 \times 18 = 36\) (2 is below 6, 18 is above 6)
+\(3 \times 12 = 36\) (3 is below 6, 12 is above 6)
+\(4 \times 9 = 36\) (4 is below 6, 9 is above 6)
+\(6 \times 6 = 36\) (Both are exactly at the square root)
+
+If you search up to the square root and find no factors, no matching factors can exist above it either. 
+Therefore, the number is guaranteed to be prime.-->

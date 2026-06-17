@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let terms = parseInt(prompt("Enter the number of terms for the Fibonacci series:"));
+
+      let n1 = 0,
+        n2 = 1,
+        nextTerm;
+      let series = [];
+
+      for (let i = 1; i <= terms; i++) {
+        series.push(n1);
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+      }
+
+      alert("Fibonacci Series:\n" + series.join(", "));
+    </script>
+  </body>
+</html>
+
+<!--The .join() method combines all elements of an array into a single string.
+
+If you do not put anything inside the parentheses series.join(), JavaScript will
+automatically use a plain comma without any spaces ("0,1,1,2,3,5").-->

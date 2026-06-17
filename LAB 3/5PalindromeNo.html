@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <script>
+        // Use const for variables that do not change value
+        let num = parseInt(prompt("Enter a number:"));
+
+        // Handle invalid inputs immediately
+        if (isNaN(num) || num < 0) {
+            alert("Please enter a valid positive number.");
+        } else {
+            let temp = num;
+            let reversed = 0;
+
+            // Mathematical reversal loop
+            while (temp > 0) {
+                const remainder = temp % 10;
+                reversed = (reversed * 10) + remainder;
+                temp = Math.floor(temp / 10);           <!--also write as parseInt(temp/10)-->
+            }
+
+            // Determine result using a clean conditional block
+            if (num === reversed) {
+                alert(num + " is a palindrome.");
+            } else {
+                alert(num + " is not a palindrome.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a no. : "));
+        let rem = 0, ans = 0, answer = 0;
+        let temp = n, count = 0;
+
+        while (n > 0) {
+            let rem = n % 10;
+            n = Math.floor(n / 10);
+            count++;
+        }
+        n = temp
+
+        while (n > 0) {
+            let rem = n % 10;
+            n = Math.floor(n / 10);
+            answer = answer + Math.pow(rem,count)
+        }
+
+        if (temp === answer) {
+            alert("Armstrong");
+        } else {
+            alert("Not armstrong");
+        }
+    </script>
+</body>
+
+</html>
